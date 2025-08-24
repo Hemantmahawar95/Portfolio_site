@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Login</title>
+    <!-- Link to Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="loginPage">
+        <div class="gradient-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                            result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+
+            <div class="gradients-container">
+                <div class="g1"></div>
+                <div class="g2"></div>
+                <div class="g3"></div>
+                <div class="g4"></div>
+                <div class="g5"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <form id="loginForm">
+                <h2>PORTFOLIO LOGIN</h2>
+                <p class="welcome-text">Hello , everyone</p>
+                <div class="input-field">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="text" id="username" required />
+                    <label>Enter username</label>
+                </div>
+                <div class="input-field">
+                    <i class="fas fa-lock icon"></i>
+                    <input type="password" id="password" required />
+                    <label>Enter password</label>
+                </div>
+                <div class="forget">
+                    <label for="Save-login">
+                        <input type="checkbox" id="Save-login" />
+                        <p>Save login information</p>
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit"> <i class="fa-solid fa-right-to-bracket"></i> Login</button>
+                <div class="Create-account">
+                    <p>Demo: username: admin, password: 1234</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Portfolio Content (Hidden initially) -->
+    <div id="portfolioContent" class="hidden">
+        <!-- Portfolio Animated Background -->
+        <div class="portfolio-bg">
+            <svg xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <filter id="portfolio-goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8"
+                            result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="portfolio-gradients">
+                <div class="pg1"></div>
+                <div class="pg2"></div>
+                <div class="pg3"></div>
+                <div class="pg4"></div>
+                <div class="pg5"></div>
+            </div>
+        </div>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <span class="animated-name">Hemant Mahawar</span>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#education" class="nav-link">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#skills" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#projects" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="logoutBtn" class="logout-btn">Logout</button>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">WELCOME , </span> TO MY PORTFOLIO
+                    </h1>
+                    <p class="hero-subtitle">"Building Digital Dreams with Code."</p>
+                                          <div class="hero-buttons">
+                          <a href="#projects" class="btn btn-primary">View My Projects</a>
+                          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                      </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="floating-elements">
+                        <div class="floating-element" data-speed="2">🚀</div>
+                        <div class="floating-element" data-speed="1.0">💻</div>
+                        <div class="floating-element" data-speed="3">✨</div>
+                        <div class="floating-element" data-speed="2.5">🎨</div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- About Section Part -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Hello, my name is  Hemant Mahawar , and i am a B.Tech CSE (2nd year ) Student with 
+                           specialization in Artificial Intelligence and Machine Learning . passionate about programming, 
+                            problem-solving, and real-world projects. Skilled in C, Python, and frontend development, 
+                            I enjoy coding challenges and continuous learning.Outside academics, I love music, basketball, and
+                            exploring the latest tech trends and news.
+                        </p>
+                        <p>My goal is to combine my technical knowledge and creativity to build useful, real-world solutions that make an impact.</p>
+                        <div class="stats">
+                            <div class="stat">
+                                <span class="stat-number">3+</span>
+                                <span class="stat-label">Projects Completed</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">0+</span>
+                                <span class="stat-label">Years Experience</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">100%</span>
+                                <span class="stat-label">Client Satisfaction</span>
+                            </div>
+                        </div>
+                    </div>
+                       <div class="about-image">
+                             <div class="image-container">
+                                <img src="my_photo.jpg" alt="My Photo" class="profile-image">
+                            </div>
+                       </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section Part -->
+        <section id="education" class="education">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="education-content">
+                    <div class="education-item">
+                        <div class="education-header">
+                            <i class="fas fa-graduation-cap education-icon"></i>
+                            <h3>Secondary (10th), RBSE – 2022</h3>
+                            <span class="education-year">2022</span>
+                        </div>
+                        <p class="education-school"><i class="fas fa-school"></i> Government New Higher Secondary School</p>
+                        <p class="education-location"><i class="fas fa-map-marker-alt"></i> Alwar, Rajasthan, India</p>
+                        <p class="education-grade"><i class="fas fa-star"></i> Grade: 53.83%</p>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-header">
+                            <i class="fas fa-graduation-cap education-icon"></i>
+                            <h3>Senior Secondary (12th), RBSE – 2024</h3>
+                            <span class="education-year">2024</span>
+                        </div>
+                        <p class="education-school"><i class="fas fa-school"></i> Government New Higher Secondary School</p>
+                        <p class="education-location"><i class="fas fa-map-marker-alt"></i> Alwar, Rajasthan, India</p>
+                        <p class="education-grade"><i class="fas fa-book"></i> Mathematics and Science (2024)</p>
+                        <p class="education-grade"><i class="fas fa-star"></i> Grade: 70.80%</p>
+                    </div>
+                    
+                    <div class="education-item">
+                        <div class="education-header">
+                            <i class="fas fa-university education-icon"></i>
+                            <h3>B.Tech in Computer Science Engineering (AI & ML)</h3>
+                            <span class="education-year">2025</span>
+                        </div>
+                        <p class="education-school"><i class="fas fa-university"></i> Vivekananda Global University</p>
+                        <p class="education-location"><i class="fas fa-map-marker-alt"></i> Jaipur,RajasthanIndia</p>
+                        <p class="education-grade"><i class="fas fa-clock"></i> 2nd Year, 3rd Semester ONGOING...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section Part -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Tools</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="HTML5">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML</span>
+                            </div>
+                            <div class="skill-item" data-skill="CSS3">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS</span>
+                            </div>
+                            <div class="skill-item" data-skill="JavaScript">
+                                <i class="fab fa-js-square"></i>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Programing language</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Python">
+                                <i class="fab fa-python"></i>
+                                <span>PYTHON</span>
+                            </div>
+                            <div class="skill-item" data-skill="C">
+                                <i class="fas fa-code"></i>
+                                <span>C</span>
+                            </div>              
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Prompt Engineering</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="ChatGPT">
+                                <i class="fas fa-comments"></i>
+                                <span>ChatGPT</span>
+                            </div>
+                            <div class="skill-item" data-skill="Google AI Studio">
+                                <i class="fab fa-google"></i>
+                                <span>Google AI Studio</span>
+                            </div>
+                            <div class="skill-item" data-skill="Perplexity">
+                                <i class="fas fa-brain"></i>
+                                <span>Perplexity</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Daliy Use Tools</h3>
+                        <div class="skill-items">
+                            <div class="skill-item" data-skill="Git">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git/GitHub</span>
+                            </div>
+                            <div class="skill-item" data-skill="VS Code">
+                                <i class="fas fa-code"></i>
+                                <span>Vs Code</span>
+                            </div>
+                            <div class="skill-item" data-skill="Notion">
+                                <i class="fas fa-sticky-note"></i>
+                                <span>Notion</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section Part-->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title"> Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                   <a href="https://github.com/Hemantmahawar95/Parsnal-Ai-Desktop-Assistant" target="_blank" class="project-link" title="GitHub Repo">
+                                            <i class="fab fa-github"></i>
+                                   </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Personal AI Desktop Assistant</h3>
+                            <p>“Developed a Personal AI Desktop Assistant using Python with speech recognition, 
+                                text-to-speech, and automation features. Designed to execute voice commands, 
+                                perform web searches, and manage desktop tasks efficiently.”</p>
+                            <div class="project-tags">
+                                <span class="tag">PYTHON</span>
+                                <span class="tag">PYTHON SPEECH-RECOGNITION</span>
+                                <span class="tag">TEXT-TO-SPEECH LIBRARIES</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                   <a href="https://github.com/Hemantmahawar95/number-guessing-game/tree/main" target="_blank" class="project-link" title="GitHub Repo">
+                                            <i class="fab fa-github"></i>
+                                   </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Number Guessing Game</h3>
+                            <p>“Developed an interactive Number Guessing Game with HTML, CSS, and JavaScript, 
+                                allowing players to guess numbers with real-time feedback and restart option.”</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JAVA SCRIPT</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i></a>
+                                    <a href="https://github.com/Hemantmahawar95/Grading_System" target="_blank" class="project-link" title="GitHub Repo">
+                                            <i class="fab fa-github"></i>
+                                   </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Grading System</h3>
+                            <p>“This Grade Calculator is made using HTML (structure), CSS (styling/design), 
+                                and JavaScript (logic for grading). It takes marks as input (0–100) and shows the correct grade (A–G) ..</p>
+                            <div class="project-tags">
+                                <span class="tag">HTML</span>
+                                <span class="tag">CSS</span>
+                                <span class="tag">JAVA SCRIPT</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section Part-->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hemantmahawar278@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+91 8854885428</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>jaipur,Rajasthan,india</p>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" name="name" id="contactName" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" id="contactEmail" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" id="contactMessage" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Part-->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Portfolio</h3>
+                        <p>"This protfolio create by me ”</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Quick Links</h3>
+                        <ul>
+                              <li><a href="#home" style="z-index:999; position:relative;">Home</a></li>
+                              <li><a href="#about" style="z-index:999; position:relative;">About</a></li>
+                              <li><a href="#education" style="z-index:999; position:relative;">Education</a></li>
+                              <li><a href="#projects" style="z-index:999; position:relative;">Projects</a></li>
+                              <li><a href="#contact" style="z-index:999; position:relative;">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Connect</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/hemant-mahawar-38281635a" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://x.com/Hemantmaha64202" target="_blank" rel="noopener noreferrer" title="Twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/hemant_teskhiwal" target="_blank" rel="noopener noreferrer" title="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://github.com/Hemantmahawar95" target="_blank" rel="noopener noreferrer" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                        <p>&copy; <span id="year"></span> Hemant Mahawar | Thank you for visiting my portfolio.</p>
+                </div>
+                <script>
+                         document.getElementById("year").textContent = new Date().getFullYear();
+                </script>
+
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
